@@ -2,19 +2,152 @@
 <html>
   <head>
     <title>LENEX</title>
+
+    <style>
+      body {
+        background-color: #0b0b0b;
+        color: #ffffff;
+        font-family: sans-serif;
+      }
+      /*Navigation bar*/
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 60px;
+        border-bottom: 1px solid #222;
+      }
+
+      .logo {
+        font-size: 26px;
+        font-weight: 700;
+        color: #d4af37;
+        letter-spacing: 2px;
+      }
+
+      nav a {
+        margin-left: 30px;
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: 400;
+        transition: color 0.3s;
+      }
+
+      nav a:hover {
+        color: #d4af37;
+      }
+
+      /*Landing Page*/
+      .page-top {
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+        background-size: cover;
+        background-position: center;
+      }
+
+      .page-top-name h1 {
+        font-size: 56px;
+        color: #d4af37;
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+
+      .page-top-name p {
+        font-size: 18px;
+        margin-bottom: 30px;
+        color: #ddd;
+      }
+
+      .page-top-name button {
+        padding: 14px 36px;
+        border: none;
+        background-color: #d4af37;
+        color: #000;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .page-top-name button:hover {
+        background-color: #b8962e;
+        transform: translateY(-2px);
+      }
+
+      /*Top Selection*/
+      .top-selection {
+        padding: 80px 60px;
+        text-align: center;
+      }
+
+      .top-selection h2 {
+        font-size: 36px;
+        margin-bottom: 40px;
+        color: #d4af37;
+      }
+
+      /*Products*/
+      .featured-product {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+      }
+
+      .product-card img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        margin-bottom: 15px;
+      }
+
+      .product-card {
+        background-color: #111;
+        padding: 20px;
+        border: 1px solid #222;
+      }
+
+      .product-card:hover {
+        transform: translateY(-5px);
+        border: 1px solid #d4af37;
+        box-shadow: 0 10px 25px rgba(255, 215, 0, 0.2);
+      }
+
+      .product-card h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      .product-card p {
+        color: #d4af37;
+        font-weight: 600;
+      }
+
+      /*Footer*/
+      footer {
+        text-align: center;
+        padding: 30px;
+        border-top: 1px solid #222;
+        color: #777;
+        font-size: 14px;
+      }
+    </style>
   </head>
 
   <body>
     <header>
+      <!--Navigation bar-->
       <div class="logo">LENEX</div>
       <nav>
-        <a href="#">Home</a>
-        <a href="#">Shop</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
+        <a href="home.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact-us.html">Contact</a>
       </nav>
     </header>
-
+    <!--Landing page-->
     <section class="page-top">
       <div class="page-top-name">
         <h1>Style Without Limits</h1>
