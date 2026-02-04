@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+  <head>
+    <title>LENEX</title>
+
+    <style>
+      body {
+        background-color: #0b0b0b;
+        color: #ffffff;
+        font-family: sans-serif;
+      }
+      /*Navigation bar*/
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 60px;
+        border-bottom: 1px solid #222;
+      }
+
+      .logo {
+        font-size: 26px;
+        font-weight: 700;
+        color: #d4af37;
+        letter-spacing: 2px;
+      }
+
+      nav a {
+        margin-left: 30px;
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: 400;
+        transition: color 0.3s;
+      }
+
+      nav a:hover {
+        color: #d4af37;
+      }
+
+      /*Footer*/
+      footer {
+        text-align: center;
+        padding: 30px;
+        border-top: 1px solid #222;
+        color: #777;
+        font-size: 14px;
+      }
+
+      .categories {
+        background: #222;
+        padding: 15px;
+      }
+
+      .categories ul {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+        padding: 10px;
+        margin: 0;
+        justify-content: center;
+      }
+
+      /*Main Category*/
+      .main-category {
+        position: relative;
+        color: #d4af37; /*category color - change this later*/
+        font-weight: 500;
+        cursor: pointer;
+      }
+
+      /*Sub category*/
+      .sub-category {
+        list-style: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <!--Navigation bar-->
+      <div class="logo">LENEX</div>
+      <nav>
+        <a href="home.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact-us.html">Contact</a>
+      </nav>
+    </header>
+
+    <section class="categories">
+      <div class="category-list">
+        <ul>
+          <li class="main-category">UNISEX</li>
+          <ul class="sub-category">
+            <li>Tops</li>
+            <li>Bottoms</li>
+            <li>Accessories</li>
+            <li>Grooming</li>
+          </ul>
+          <li class="main-category">WOMEN</li>
+          <ul class="sub-category">
+            <li>Casualwear</li>
+            <li>Formalwear</li>
+            <li>Nightwear</li>
+            <li>Accessories</li>
+          </ul>
+          <li class="main-category">MEN</li>
+          <ul class="sub-category">
+            <li>Casualwear</li>
+            <li>Formalwear</li>
+            <li>Underwear & Socks</li>
+            <li>Accessories</li>
+          </ul>
+          <li class="main-category">SPORTS</li>
+          <ul class="sub-category">
+            <li>Activewear-UNISEX</li>
+            <li>Activewear-WOMEN</li>
+            <li>Activewear-MEN</li>
+            <li>Activewear-KIDS</li>
+          </ul>
+          <li class="main-category">FOOTWEAR</li>
+          <ul class="sub-category">
+            <li>Women's Footwear</li>
+            <li>Men's Footwear</li>
+            <li>Kid's Footwear: Girls</li>
+            <li>Kid's Footwear: Boys</li>
+          </ul>
+          <li class="main-category">BAGS</li>
+          <ul class="sub-category">
+            <li>Women's Bags</li>
+            <li>Men's Bags</li>
+            <li>Travel Bags</li>
+          </ul>
+          <li class="main-category">WATCHES & SUNGLASSESS</li>
+          <ul class="sub-category">
+            <li>Fashion Watches</li>
+            <li>Fine Watches</li>
+            <li>Sunglasses</li>
+          </ul>
+          <li class="main-category">JEWELLERY</li>
+          <ul class="sub-category">
+            <li>Fashion Jewellery</li>
+            <li>Luxery Jewellery</li>
+          </ul>
+          <li class="main-category">KIDS</li>
+          <ul class="sub-category">
+            <li>Unisex Apparel</li>
+            <li>Boys Apparel</li>
+            <li>Accessories</li>
+            <li>Toys</li>
+          </ul>
+        </ul>
+      </div>
+    </section>
+  </body>
+</html>
