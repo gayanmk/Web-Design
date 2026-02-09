@@ -6,7 +6,6 @@
     <style>
       body {
         background-color: #0b0b0b;
-        background-image: Videos/background video.mp4;
         color: #ffffff;
         font-family: sans-serif;
       }
@@ -126,6 +125,68 @@
         font-weight: 600;
       }
 
+      /*Prouct category Navigation Bar*/
+      .categories {
+        background: #222;
+        padding: 15px;
+      }
+
+      .category-list {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+        padding: 10px;
+        margin: 0;
+        justify-content: center;
+      }
+
+      /*Main Category*/
+      .main-category {
+        position: relative;
+        color: #d4af37; /*category color - change this later*/
+        font-weight: 500;
+        cursor: pointer;
+      }
+
+      /*Sub category*/
+      .sub-category {
+        list-style: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #111;
+        border: 1px solid #222;
+        min-width: 180px;
+        padding: 10px 0;
+        display: none;
+        z-index: 1000;
+      }
+
+      .sub-category li {
+        padding: 8px 15px;
+        color: #d4af37;
+        white-space: nowrap;
+      }
+
+      .sub-category li:hover {
+        background: #222;
+      }
+
+      .main-category:hover .sub-category {
+        display: block;
+      }
+
+      .shop {
+        padding: 80px 60px;
+        text-align: center;
+      }
+
+      .shop h2 {
+        font-size: 36px;
+        margin-bottom: 40px;
+        color: #d4af37;
+      }
+
       /*Footer*/
       footer {
         text-align: center;
@@ -148,6 +209,100 @@
         <a href="contact-us.html">Contact</a>
       </nav>
     </header>
+
+    <!--Category List-->
+    <section class="categories">
+      <div>
+        <ul class="category-list">
+          <li class="main-category">
+            UNISEX
+            <ul class="sub-category">
+              <li>Tops</li>
+              <li>Bottoms</li>
+              <li>Accessories</li>
+              <li>Grooming</li>
+            </ul>
+          </li>
+
+          <li class="main-category">
+            WOMEN
+            <ul class="sub-category">
+              <li>Casualwear</li>
+              <li>Formalwear</li>
+              <li>Nightwear</li>
+              <li>Accessories</li>
+            </ul>
+          </li>
+
+          <li class="main-category">
+            MEN
+            <ul class="sub-category">
+              <li>Casualwear</li>
+              <li>Formalwear</li>
+              <li>Underwear & Socks</li>
+              <li>Accessories</li>
+            </ul>
+          </li>
+
+          <li class="main-category">
+            SPORTS
+            <ul class="sub-category">
+              <li>Activewear-UNISEX</li>
+              <li>Activewear-WOMEN</li>
+              <li>Activewear-MEN</li>
+              <li>Activewear-KIDS</li>
+            </ul>
+          </li>
+
+          <li class="main-category">
+            FOOTWEAR
+            <ul class="sub-category">
+              <li>Women's Footwear</li>
+              <li>Men's Footwear</li>
+              <li>Kid's Footwear: Girls</li>
+              <li>Kid's Footwear: Boys</li>
+            </ul>
+          </li>
+
+          <li class="main-category">
+            BAGS
+            <ul class="sub-category">
+              <li>Women's Bags</li>
+              <li>Men's Bags</li>
+              <li>Travel Bags</li>
+            </ul>
+          </li>
+
+          <li class="main-category">
+            WATCHES & SUNGLASSESS
+            <ul class="sub-category">
+              <li>Fashion Watches</li>
+              <li>Fine Watches</li>
+              <li>Sunglasses</li>
+            </ul>
+          </li>
+
+          <li class="main-category">
+            JEWELLERY
+            <ul class="sub-category">
+              <li>Fashion Jewellery</li>
+              <li>Luxery Jewellery</li>
+            </ul>
+          </li>
+
+          <li class="main-category">
+            KIDS
+            <ul class="sub-category">
+              <li>Unisex Apparel</li>
+              <li>Boys Apparel</li>
+              <li>Accessories</li>
+              <li>Toys</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
     <!--Landing page-->
     <section class="page-top">
       <div class="page-top-name">
@@ -162,21 +317,30 @@
       <h2>Top Selection</h2>
       <div class="featured-product">
         <div class="product-card">
-          <img src="Image/white long dress.jpg" alt="product" />
+          <img
+            src="Image/Home Page/Featured Products/white long dress.jpg"
+            alt="product"
+          />
           <h3>The Classic White Flow</h3>
-          <p>$59.00</p>
+          <p>Rs 7,999.00</p>
         </div>
 
         <div class="product-card">
-          <img src="Image/pink top.jpg" alt="product" />
+          <img
+            src="Image/Home Page/Featured Products/pink top.jpg"
+            alt="product"
+          />
           <h3>Rose Whisper Top</h3>
-          <p>$49.00</p>
+          <p>Rs 6,599.00</p>
         </div>
 
         <div class="product-card">
-          <img src="Image/white short dress.jpg" alt="product" />
+          <img
+            src="Image/Home Page/Featured Products/white short dress.jpg"
+            alt="product"
+          />
           <h3>Pearl Breeze Dress</h3>
-          <p>$69.00</p>
+          <p>Rs 7,799.00</p>
         </div>
       </div>
     </section>

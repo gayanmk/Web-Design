@@ -46,12 +46,13 @@
         font-size: 14px;
       }
 
+      /*Prouct category Navigation Bar*/
       .categories {
         background: #222;
         padding: 15px;
       }
 
-      .categories ul {
+      .category-list {
         list-style: none;
         display: flex;
         gap: 30px;
@@ -71,6 +72,76 @@
       /*Sub category*/
       .sub-category {
         list-style: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #111;
+        border: 1px solid #222;
+        min-width: 180px;
+        padding: 10px 0;
+        display: none;
+        z-index: 1000;
+      }
+
+      .sub-category li {
+        padding: 8px 15px;
+        color: #d4af37;
+        white-space: nowrap;
+      }
+
+      .sub-category li:hover {
+        background: #222;
+      }
+
+      .main-category:hover .sub-category {
+        display: block;
+      }
+
+      .shop {
+        padding: 80px 60px;
+        text-align: center;
+      }
+
+      .shop h2 {
+        font-size: 36px;
+        margin-bottom: 40px;
+        color: #d4af37;
+      }
+
+      /*Products*/
+      .shop-product {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+      }
+
+      .product-card img {
+        width: 100%;
+        height: 700px;
+        object-fit: cover;
+        margin-bottom: 15px;
+      }
+
+      .product-card {
+        background-color: #111;
+        padding: 20px;
+        border: 1px solid #222;
+      }
+
+      .product-card:hover {
+        transform: translateY(-5px);
+        border: 1px solid #d4af37;
+        box-shadow: 0 10px 25px rbga(255, 215, 0, 0.2);
+      }
+
+      .product-card h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      .product-card p {
+        color: #d4af37;
+        font-weight: 600;
       }
     </style>
   </head>
@@ -87,70 +158,165 @@
       </nav>
     </header>
 
+    <!--Category List-->
     <section class="categories">
-      <div class="category-list">
-        <ul>
-          <li class="main-category">UNISEX</li>
-          <ul class="sub-category">
-            <li>Tops</li>
-            <li>Bottoms</li>
-            <li>Accessories</li>
-            <li>Grooming</li>
-          </ul>
-          <li class="main-category">WOMEN</li>
-          <ul class="sub-category">
-            <li>Casualwear</li>
-            <li>Formalwear</li>
-            <li>Nightwear</li>
-            <li>Accessories</li>
-          </ul>
-          <li class="main-category">MEN</li>
-          <ul class="sub-category">
-            <li>Casualwear</li>
-            <li>Formalwear</li>
-            <li>Underwear & Socks</li>
-            <li>Accessories</li>
-          </ul>
-          <li class="main-category">SPORTS</li>
-          <ul class="sub-category">
-            <li>Activewear-UNISEX</li>
-            <li>Activewear-WOMEN</li>
-            <li>Activewear-MEN</li>
-            <li>Activewear-KIDS</li>
-          </ul>
-          <li class="main-category">FOOTWEAR</li>
-          <ul class="sub-category">
-            <li>Women's Footwear</li>
-            <li>Men's Footwear</li>
-            <li>Kid's Footwear: Girls</li>
-            <li>Kid's Footwear: Boys</li>
-          </ul>
-          <li class="main-category">BAGS</li>
-          <ul class="sub-category">
-            <li>Women's Bags</li>
-            <li>Men's Bags</li>
-            <li>Travel Bags</li>
-          </ul>
-          <li class="main-category">WATCHES & SUNGLASSESS</li>
-          <ul class="sub-category">
-            <li>Fashion Watches</li>
-            <li>Fine Watches</li>
-            <li>Sunglasses</li>
-          </ul>
-          <li class="main-category">JEWELLERY</li>
-          <ul class="sub-category">
-            <li>Fashion Jewellery</li>
-            <li>Luxery Jewellery</li>
-          </ul>
-          <li class="main-category">KIDS</li>
-          <ul class="sub-category">
-            <li>Unisex Apparel</li>
-            <li>Boys Apparel</li>
-            <li>Accessories</li>
-            <li>Toys</li>
-          </ul>
+      <div>
+        <ul class="category-list">
+          <li class="main-category">
+            UNISEX
+            <ul class="sub-category">
+              <li>Tops</li>
+              <li>Bottoms</li>
+              <li>Accessories</li>
+              <li>Grooming</li>
+            </ul>
+          </li>
+
+          <li class="main-category">
+            WOMEN
+            <ul class="sub-category">
+              <li>Casualwear</li>
+              <li>Formalwear</li>
+              <li>Nightwear</li>
+              <li>Accessories</li>
+            </ul>
+          </li>
+
+          <li class="main-category">
+            MEN
+            <ul class="sub-category">
+              <li>Casualwear</li>
+              <li>Formalwear</li>
+              <li>Underwear & Socks</li>
+              <li>Accessories</li>
+            </ul>
+          </li>
+
+          <li class="main-category">
+            SPORTS
+            <ul class="sub-category">
+              <li>Activewear-UNISEX</li>
+              <li>Activewear-WOMEN</li>
+              <li>Activewear-MEN</li>
+              <li>Activewear-KIDS</li>
+            </ul>
+          </li>
+
+          <li class="main-category">
+            FOOTWEAR
+            <ul class="sub-category">
+              <li>Women's Footwear</li>
+              <li>Men's Footwear</li>
+              <li>Kid's Footwear: Girls</li>
+              <li>Kid's Footwear: Boys</li>
+            </ul>
+          </li>
+
+          <li class="main-category">
+            BAGS
+            <ul class="sub-category">
+              <li>Women's Bags</li>
+              <li>Men's Bags</li>
+              <li>Travel Bags</li>
+            </ul>
+          </li>
+
+          <li class="main-category">
+            WATCHES & SUNGLASSESS
+            <ul class="sub-category">
+              <li>Fashion Watches</li>
+              <li>Fine Watches</li>
+              <li>Sunglasses</li>
+            </ul>
+          </li>
+
+          <li class="main-category">
+            JEWELLERY
+            <ul class="sub-category">
+              <li>Fashion Jewellery</li>
+              <li>Luxery Jewellery</li>
+            </ul>
+          </li>
+
+          <li class="main-category">
+            KIDS
+            <ul class="sub-category">
+              <li>Unisex Apparel</li>
+              <li>Boys Apparel</li>
+              <li>Accessories</li>
+              <li>Toys</li>
+            </ul>
+          </li>
         </ul>
       </div>
     </section>
+
+    <!--Shop-->
+    <section class="shop">
+      <h2>Unisex Tops</h2>
+      <div class="shop-product">
+        <div class="product-card">
+          <img
+            src="Image/Shop Page/Unisex Tops/UnisexTops1.webp"
+            alt="unisex-tops"
+          />
+          <h3>Indigo Pulse Tee</h3>
+          <p>Rs 10,990.00</p>
+        </div>
+
+        <div class="product-card">
+          <img
+            src="Image/Shop Page/Unisex Tops/UnisexTops2.webp"
+            alt="unisex-tops"
+          />
+          <h3>Mist Floral Oversize</h3>
+          <p>Rs 11,790.00</p>
+        </div>
+
+        <div class="product-card">
+          <img
+            src="Image/Shop Page/Unisex Tops/UnisexTops3.webp"
+            alt="unisex-tops"
+          />
+          <h3>Emerald Breeze Shirt</h3>
+          <p>Rs 11,790.00</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="shop">
+      <h2>Women Casual Wear</h2>
+      <div class="shop-product">
+        <div class="product-card">
+          <img
+            src="Image/Shop Page/Women Casual Wear/Casual1.jpg"
+            alt="women-casual-wear1"
+          />
+          <h3>Velvet Stone Loungewear</h3>
+          <p>Rs 8,590.00</p>
+        </div>
+
+        <div class="product-card">
+          <img
+            src="Image/Shop Page/Women Casual Wear/Casual2.webp"
+            alt="women-casual-wear2"
+          />
+          <h3>Azure Shoreline Midi</h3>
+          <p>Rs 8,690.00</p>
+        </div>
+
+        <div class="product-card">
+          <img
+            src="Image/Shop Page/Women Casual Wear/Casual3.webp"
+            alt="women-casual-wear3"
+          />
+          <h3>Blush Horizon Button-Down</h3>
+          <p>Rs 9,290.00</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>© 2026 LENEX. All rights reserved.</footer>
   </body>
 </html>
